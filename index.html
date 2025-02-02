@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG Interior Solutions</title> <!-- Updated title -->
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu-page">
+        <h1>
+            <span class="gg-bold">GG</span><br>
+            <span class="interior-solutions">Interior Solutions</span>
+        </h1> <!-- Updated heading with two lines -->
+        <button onclick="navigateTo('bedroom')">Bedroom</button>
+        <button onclick="navigateTo('bathroom')">Bathroom</button>
+        <button onclick="navigateTo('garden')">Garden</button>
+        <button onclick="navigateTo('living-room')">Living Room</button>
+    </div>
+
+    <div id="room-page" style="display: none;">
+        <h1 id="room-title"></h1>
+        <div id="room-container">
+            <button id="prev-background" onclick="changeBackground(-1)">&lt;</button>
+            <div id="room"></div>
+            <button id="next-background" onclick="changeBackground(1)">&gt;</button>
+            <div id="items-list">
+                <div id="furniture-styles"></div>
+            </div>
+        </div>
+        <button onclick="goBack()">Back to Menu</button>
+        <button onclick="undo()">Undo</button>
+        <button onclick="saveRoom()">Save Room</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
